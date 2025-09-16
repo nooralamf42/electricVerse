@@ -1,4 +1,5 @@
 import { BRAND_NAME } from '@/constants/globalConstants'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
@@ -45,10 +46,10 @@ const Nav = () => {
         <div className='flex shrink-0 gap-20'>
             <div className='flex flex-col gap-2'>
                 <h3 className='mb-2 uppercase dark:text-[#ffffff80]'>About</h3>
-                <p>Home</p>
-                <p>Projects</p>
-                <p>Our Mission</p>
-                <p>Contact Us</p>
+                <Link href="/">Home</Link>
+                <Link href="/services">All Services</Link>
+                {/* <Link href="/about">Our Mission</Link> */}
+                {/* <p>Contact Us</p> */}
             </div>
             <div className='flex flex-col gap-2'>
                 <h3 className='mb-2 uppercase dark:text-[#ffffff80]'>Services</h3>

@@ -12,9 +12,9 @@ export const navItems = [
         href: `tel:+${PHONE_NUMBER}`,
         icon: Phone
     },
-    {
-        name: 'Contact Us',
-        href: '/contact',
-        icon: Contact
-    }   
+    // {
+    //     name: 'Contact Us',
+    //     href: '/contact',
+    //     icon: Contact
+    // }   
 ]
