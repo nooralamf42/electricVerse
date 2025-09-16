@@ -38,12 +38,12 @@ const NavBar = () => {
             <div className="container mx-auto flex justify-between items-center px-4">
                 <motion.div className='text-xl md:text-2xl font-bold' variants={brandNameVariant} initial="hidden" animate="show"><Link href="/">{BRAND_NAME}</Link></motion.div>
                 
-                <SideNav />
+                {/* <SideNav /> */}
                 <motion.ul
                     variants={listVariants}
                     initial="hidden"
                     animate="show"
-                    className='flex justify-end gap-4 items-center max-sm:hidden'>
+                    className='flex justify-end gap-4 items-center'>
                     {/* Search box */}
                     {/* <motion.li variants={itemVariants} key={'searchBox'}>
                         <SearchBox />

@@ -27,9 +27,9 @@ const SideNav = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <motion.aside initial={{ opacity: 0 , y: 20}} animate={{ opacity: 1, y: 0 }} className='hidden max-sm:flex justify-end items-center gap-1'>
-            <motion.div initial={{ opacity: 0 , y: 20}} animate={{ opacity: 1, y: 0 }}>
+            {/* <motion.div initial={{ opacity: 0 , y: 20}} animate={{ opacity: 1, y: 0 }}>
                 <SearchBox/>
-            </motion.div>
+            </motion.div> */}
             <motion.div initial={{ opacity: 0 , y: 20}} animate={{ opacity: 1, y: 0 }}>
                 <ThemeModeToggle />
             </motion.div>
