@@ -15,6 +15,7 @@ export default function Footer() {
   )
 }
 
+
 function Content() {
   return (
     <div className='dark:bg-[#4E4E5A] bg-neutral-100 py-8 px-12 h-full w-full flex flex-col justify-between mx-auto p-4 container'>
