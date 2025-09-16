@@ -1,6 +1,6 @@
-import HeroSection from "./components/heroSection"
-import ServicesSection from "./components/servicesSection"
-import WhatToExpectSection from "./components/whatToExpectSection"
+import HeroSection from "./_components/heroSection"
+import ServicesSection from "./_components/servicesSection"
+import WhatToExpectSection from "./_components/whatToExpectSection"
 
 const Homepage = () => {
   return (

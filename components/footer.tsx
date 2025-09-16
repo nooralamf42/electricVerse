@@ -33,7 +33,7 @@ const Section1 = () => {
 
 const Section2 = () => {
     return (
-        <div className='flex justify-between items-end'>
+        <div className='md:flex justify-between items-end'>
             <h1 className='text-[10vw] leading-[0.8] mt-10'>{BRAND_NAME}</h1>
             <p>©copyright</p>
         </div>

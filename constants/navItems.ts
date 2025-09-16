@@ -1,4 +1,5 @@
-import { Home, Calendar, ShoppingCart } from "lucide-react"
+import { Home, Phone, Contact } from "lucide-react"
+import { PHONE_NUMBER } from "./globalConstants"
 
 export const navItems = [
     {
@@ -7,13 +8,13 @@ export const navItems = [
         icon: Home
     },
     {
-        name: "Booking",
-        href: "/booking",
-        icon: Calendar
+        name: "Call Us",
+        href: `tel:+${PHONE_NUMBER}`,
+        icon: Phone
     },
     {
-        name: 'Cart',
-        href: '/cart',
-        icon: ShoppingCart
+        name: 'Contact Us',
+        href: '/contact',
+        icon: Contact
     }   
 ]

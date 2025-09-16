@@ -4,6 +4,7 @@ import { ArrowUp  } from 'lucide-react'
 import { useRef} from 'react'
 import { useScroll, useTransform, motion } from 'motion/react'
 import Link from 'next/link'
+import WhatsappButton from '@/components/whatsappButton'
 
 const ServicesSection = () => {
 
@@ -58,6 +59,9 @@ const Card = ({ card, index }: { card: { name: string, image: string, descriptio
       key={index}
       className="group relative h-[80dvh]  w-[340px] sm:w-[450px] overflow-hidden bg-neutral-200"
     >
+      <div className="absolute bottom-4 left-4 right-4 z-30">
+        <WhatsappButton service={card.name} />
+      </div>
       <div
         style={{
           backgroundImage: `url(${card.image})`,

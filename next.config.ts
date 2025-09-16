@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
         hostname: "picsum.photos",
       },
     ],
+    unoptimized: true,
     domains: ["res.cloudinary.com", "assets.grok.com"],
   },
 };

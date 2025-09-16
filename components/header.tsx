@@ -4,7 +4,6 @@ import Link from 'next/link'
 import * as motion from "motion/react-client"
 import { ThemeModeToggle } from './themeModeToggle'
 import SideNav from './sideNav'
-import SearchBox from './searchBox'
 
 const Header = () => {
     return (
@@ -37,7 +36,7 @@ const NavBar = () => {
     return (
         <nav className='fixed top-0 z-50 bg-white/90 dark:bg-black/90 border-b backdrop-blur py-4 w-full'>
             <div className="container mx-auto flex justify-between items-center px-4">
-                <motion.div variants={brandNameVariant} initial="hidden" animate="show"><Link href="/">{BRAND_NAME}</Link></motion.div>
+                <motion.div className='text-xl md:text-2xl font-bold' variants={brandNameVariant} initial="hidden" animate="show"><Link href="/">{BRAND_NAME}</Link></motion.div>
                 
                 <SideNav />
                 <motion.ul
@@ -46,9 +45,9 @@ const NavBar = () => {
                     animate="show"
                     className='flex justify-end gap-4 items-center max-sm:hidden'>
                     {/* Search box */}
-                    <motion.li variants={itemVariants} key={'searchBox'}>
+                    {/* <motion.li variants={itemVariants} key={'searchBox'}>
                         <SearchBox />
-                    </motion.li>
+                    </motion.li> */}
                     {/* Theme Mode Toggle Button */}
                     <motion.li  variants={itemVariants} key={'themeModeToggle'}>
                         <ThemeModeToggle />

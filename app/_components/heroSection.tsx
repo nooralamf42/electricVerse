@@ -2,9 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import * as motion from "motion/react-client"
 import { services } from '@/constants/services'
-import Link from 'next/link'
 import { Star, Users2 } from 'lucide-react'
 import { HAPPY_CUSTOMERS, RATING } from '@/constants/globalConstants'
+import BookServiceDialog from '@/components/bookServiceDialog'
 
 
 const leftSideVariants = {
@@ -13,7 +13,6 @@ const leftSideVariants = {
 }
 
 const HeroSection = () => {
-
     return (
         <section className='grid md:grid-cols-2 gap-4 justify-center md:justify-between mt-20 md:mt-40 items-center min-h-[70vh] overflow-hidden'>
             {/* left side */}
@@ -25,18 +24,18 @@ const HeroSection = () => {
                 <h2 className='text-lg font-semibold text-neutral-700 dark:text-white tracking-tight'>Which service are you looking for?</h2>
                 <div className='grid grid-cols-3 gap-4 mt-4'>
                     {services.map((service) => (
-                        <Link key={service.name} href={service.href}>
+                        <BookServiceDialog service={service.name} key={service.name}>
                             <div className="flex items-center flex-col gap-2">
                                 <Image
                                     src={service.image}
-                                    className='rounded-lg h-20 w-30 object-cover'
+                                    className='rounded-lg h-20 w-30 object-cover object-center'
                                     alt={service.name}
                                     width={50}
                                     height={50}
                                 />
                                 <p className='text-center text-sm text-neutral-600 dark:text-white' >{service.name}</p>
                             </div>
-                        </Link>
+                        </BookServiceDialog>
                     ))}
                 </div>
               </div>
@@ -62,7 +61,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 grid-rows-3 gap-2">
                 <motion.div className="row-span-2 relative w-full h-full" viewport={{amount: .1}} whileInView={{filter: 'blur(0px)', rotate: 0, y: 0}} initial={{ filter: 'blur(10px)', rotate: 10, y: -10 }} transition={{ duration: .3 }}>
                     <Image
-                        src="https://picsum.photos/400/600"
+                        src="/gardening.png"
                         alt="Service 1"
                         fill
                         className="object-cover rounded-lg"
@@ -72,7 +71,7 @@ const HeroSection = () => {
                 {/* Top Right */}
                 <motion.div className="relative w-full h-48" viewport={{amount: .1}} whileInView={{filter: 'blur(0px)', rotate: 0, y: 0}} initial={{ filter: 'blur(10px)', rotate: 10, y: -10 }} transition={{ duration: .3 }}>
                     <Image
-                        src="https://picsum.photos/400/300?random=2"
+                        src="/carpentry.jpg"
                         alt="Service 2"
                         fill
                         className="object-cover rounded-lg"
@@ -82,7 +81,7 @@ const HeroSection = () => {
                 {/* Bottom Left */}
                 <motion.div className="relative w-full h-full row-span-2" viewport={{amount: .1}} whileInView={{filter: 'blur(0px)', x: 0}} initial={{ filter: 'blur(10px)',  x: 100 }} transition={{ duration: .3 }}>
                     <Image
-                        src="https://picsum.photos/400/300?random=3"
+                        src="/electrical.webp"
                         alt="Service 3"
                         fill
                         className="object-cover rounded-lg"
@@ -93,10 +92,10 @@ const HeroSection = () => {
                 {/* Bottom Right */}
                 <motion.div className="relative w-full h-full" viewport={{amount: .1}} whileInView={{filter: 'blur(0px)', x: 0}} initial={{ filter: 'blur(10px)',  x: -100 }} transition={{ duration: .3 }}>
                     <Image
-                        src="https://picsum.photos/400/300?random=4"
+                        src="painting.jpg"
                         alt="Service 4"
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-cover rounded-lg object-left"
                     />
                 </motion.div>
             </div>
