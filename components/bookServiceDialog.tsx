@@ -17,8 +17,8 @@ const BookServiceDialog = ({ children, service }: { children: React.ReactNode, s
                 </DialogHeader>
 
                 <div className="flex gap-5  justify-center items-center mt-4">
-                    <Link target="_blank" className='bg-green-50 flex items-center gap-2 rounded-full border px-5 py-2 cursor-pointer' href={`tel:${PHONE_NUMBER}`}><span>Book Now <PhoneCall className='text-green-500 inline-block ' size={25} /></span></Link>
-                    <Link target="_blank" className='bg-green-50 flex items-center gap-2 rounded-full border px-5 py-2 cursor-pointer' href={`https://api.whatsapp.com/send?phone=${PHONE_NUMBER}&text=I%20want%20to%20get%20${service.toLowerCase()} service at my home.`}><span>Message on WhatsApp <FaWhatsapp className='text-green-500 inline-block ' size={25} /></span></Link>
+                    <Link target="_blank" className='dark:text-black bg-green-50 flex items-center gap-2 rounded-full border px-5 py-2 cursor-pointer' href={`tel:${PHONE_NUMBER}`}><span>Book Now <PhoneCall className='text-green-500 inline-block ' size={25} /></span></Link>
+                    <Link target="_blank" className='dark:text-black bg-green-50 flex items-center gap-2 rounded-full border px-5 py-2 cursor-pointer' href={`https://api.whatsapp.com/send?phone=${PHONE_NUMBER}&text=I%20want%20to%20get%20${service.toLowerCase()} service at my home.`}><span>Message on WhatsApp <FaWhatsapp className='text-green-500 inline-block ' size={25} /></span></Link>
                 </div>
 
                 {/* <DialogFooter>
